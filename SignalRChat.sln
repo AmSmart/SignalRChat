@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRChat.Blazor", "SignalRChat.Blazor\SignalRChat.Blazor.csproj", "{34C0961D-4FA5-4A18-ADD3-C3E6E2D7F6DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRChat.Api", "SignalRChat.Api\SignalRChat.Api.csproj", "{C50F67DD-5E99-4DAA-9608-34CFC007944E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34C0961D-4FA5-4A18-ADD3-C3E6E2D7F6DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34C0961D-4FA5-4A18-ADD3-C3E6E2D7F6DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34C0961D-4FA5-4A18-ADD3-C3E6E2D7F6DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34C0961D-4FA5-4A18-ADD3-C3E6E2D7F6DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C50F67DD-5E99-4DAA-9608-34CFC007944E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C50F67DD-5E99-4DAA-9608-34CFC007944E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C50F67DD-5E99-4DAA-9608-34CFC007944E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C50F67DD-5E99-4DAA-9608-34CFC007944E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F11356CA-A33B-4B64-82AE-9CC426977812}
+	EndGlobalSection
+EndGlobal
