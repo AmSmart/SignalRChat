@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.30204.135
+VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRChat.Blazor", "SignalRChat.Blazor\SignalRChat.Blazor.csproj", "{34C0961D-4FA5-4A18-ADD3-C3E6E2D7F6DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRChat.Server", "TempWebApp\Server\SignalRChat.Server.csproj", "{E7815776-955E-4D4B-ABB9-DC50DD88AA41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRChat.Api", "SignalRChat.Api\SignalRChat.Api.csproj", "{C50F67DD-5E99-4DAA-9608-34CFC007944E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRChat.Client", "TempWebApp\Client\SignalRChat.Client.csproj", "{AEE68E1A-ED09-4F4A-BA99-F15440D18EC5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRChat.Shared", "TempWebApp\Shared\SignalRChat.Shared.csproj", "{100942F8-BD13-470A-8A87-170B8075E794}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,19 +15,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{34C0961D-4FA5-4A18-ADD3-C3E6E2D7F6DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{34C0961D-4FA5-4A18-ADD3-C3E6E2D7F6DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{34C0961D-4FA5-4A18-ADD3-C3E6E2D7F6DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{34C0961D-4FA5-4A18-ADD3-C3E6E2D7F6DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C50F67DD-5E99-4DAA-9608-34CFC007944E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C50F67DD-5E99-4DAA-9608-34CFC007944E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C50F67DD-5E99-4DAA-9608-34CFC007944E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C50F67DD-5E99-4DAA-9608-34CFC007944E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7815776-955E-4D4B-ABB9-DC50DD88AA41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7815776-955E-4D4B-ABB9-DC50DD88AA41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7815776-955E-4D4B-ABB9-DC50DD88AA41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7815776-955E-4D4B-ABB9-DC50DD88AA41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEE68E1A-ED09-4F4A-BA99-F15440D18EC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEE68E1A-ED09-4F4A-BA99-F15440D18EC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEE68E1A-ED09-4F4A-BA99-F15440D18EC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEE68E1A-ED09-4F4A-BA99-F15440D18EC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{100942F8-BD13-470A-8A87-170B8075E794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{100942F8-BD13-470A-8A87-170B8075E794}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{100942F8-BD13-470A-8A87-170B8075E794}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{100942F8-BD13-470A-8A87-170B8075E794}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {F11356CA-A33B-4B64-82AE-9CC426977812}
+		SolutionGuid = {EF85907C-2C5F-4FAF-B69C-B390E596D5D3}
 	EndGlobalSection
 EndGlobal

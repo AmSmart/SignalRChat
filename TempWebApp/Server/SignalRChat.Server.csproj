@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>23cd845a-d674-471b-9347-d57277cd3b6e</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="5.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Client\SignalRChat.Client.csproj" />
+    <ProjectReference Include="..\Shared\SignalRChat.Shared.csproj" />
+  </ItemGroup>
+
+
+</Project>

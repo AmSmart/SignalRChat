@@ -1,0 +1,12 @@
+C:\Users\Engineer Smart\source\repos\TempWebApp\TempWebApp\Shared\bin\Debug\net5.0\TempWebApp.Shared.deps.json
+C:\Users\Engineer Smart\source\repos\TempWebApp\TempWebApp\Shared\bin\Debug\net5.0\TempWebApp.Shared.dll
+C:\Users\Engineer Smart\source\repos\TempWebApp\TempWebApp\Shared\bin\Debug\net5.0\ref\TempWebApp.Shared.dll
+C:\Users\Engineer Smart\source\repos\TempWebApp\TempWebApp\Shared\bin\Debug\net5.0\TempWebApp.Shared.pdb
+C:\Users\Engineer Smart\source\repos\TempWebApp\TempWebApp\Shared\obj\Debug\net5.0\TempWebApp.Shared.csprojAssemblyReference.cache
+C:\Users\Engineer Smart\source\repos\TempWebApp\TempWebApp\Shared\obj\Debug\net5.0\TempWebApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Engineer Smart\source\repos\TempWebApp\TempWebApp\Shared\obj\Debug\net5.0\TempWebApp.Shared.AssemblyInfoInputs.cache
+C:\Users\Engineer Smart\source\repos\TempWebApp\TempWebApp\Shared\obj\Debug\net5.0\TempWebApp.Shared.AssemblyInfo.cs
+C:\Users\Engineer Smart\source\repos\TempWebApp\TempWebApp\Shared\obj\Debug\net5.0\TempWebApp.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Engineer Smart\source\repos\TempWebApp\TempWebApp\Shared\obj\Debug\net5.0\TempWebApp.Shared.dll
+C:\Users\Engineer Smart\source\repos\TempWebApp\TempWebApp\Shared\obj\Debug\net5.0\ref\TempWebApp.Shared.dll
+C:\Users\Engineer Smart\source\repos\TempWebApp\TempWebApp\Shared\obj\Debug\net5.0\TempWebApp.Shared.pdb

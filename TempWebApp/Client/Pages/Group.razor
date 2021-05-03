@@ -1,0 +1,110 @@
+﻿@page "/group"
+@inject HttpClient httpClient
+@inject IJSRuntime JSRuntime
+@using Microsoft.AspNetCore.SignalR.Client
+
+<div class="container">
+
+    <div class="row">
+        <h1>Group Chat</h1>
+        <h3>Connection Status: @ConnectionStatus</h3>
+    </div>
+
+    <div class="row">
+        <label>
+            Group Name:
+            <input @bind="GroupName" disabled="@Connected" placeholder="Enter Group Name" />
+        </label>
+        <button class="btn" style="color: white; background-color: cadetblue"
+                @onclick="async () => await ConnectToGroup()" disabled="@Connected">
+            Connect
+        </button>
+    </div>
+
+
+    <div class="row">
+        <h3 class="text-success">Messages load here</h3>
+        @foreach (var item in Notifications)
+        {
+            <div class="card">
+                <div class="card-header">
+                    <span style="color: dodgerblue">@item.Key: </span><span>@item.Value</span>
+                </div>
+            </div>
+        }
+        <div>
+            <label>
+                Name:
+                <input placeholder="Write your name" @bind="Name" />
+            </label>
+            <label>
+                Message:
+                <input placeholder="Write your message" @bind="Message" />
+            </label>
+            <button style="color: white; background-color: cadetblue" @onclick="async () => await Send()">Send</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+@code{
+
+    [Inject]
+    public NavigationManager NavigationManager { get; set; }
+
+    private string GroupName;
+    private string Name;
+    private string Message;
+    private bool Connected;
+    HubConnection Connection = null;
+    string ConnectionStatus = "Closed";
+    List<KeyValuePair<string, string>> Notifications = new List<KeyValuePair<string, string>>();
+
+    async Task ConnectToGroup()
+    {
+        string Url = $"{NavigationManager.BaseUri}notificationhub";
+        if (string.IsNullOrEmpty(GroupName))
+        {
+            await JSRuntime.InvokeVoidAsync("Alert", "Group name cannot be empty");
+            return;
+        }
+
+        Connection = new HubConnectionBuilder()
+            .WithUrl(Url)
+            .Build();
+
+        await Connection.StartAsync();
+        Connected = true;
+        ConnectionStatus = "Connected 😜";
+
+        await httpClient.PostAsync(
+            $"{NavigationManager.BaseUri}joingroup?connectionId={Connection.ConnectionId}&userName={Name}&groupName={GroupName}", null);
+
+        Connection.Closed += async (s) =>
+        {
+            Connected = false;
+            ConnectionStatus = "Disconnected";
+            await Connection.StartAsync();
+            Connected = true;
+        };
+
+        Connection.On<string, string>(GroupName, (user, message) =>
+        {
+            Notifications.Add(KeyValuePair.Create(user, message));
+            StateHasChanged();
+        });
+    }
+
+    private async Task Send()
+    {
+        if (string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(Message))
+        {
+            string errorMessage = "Name and Message textboxes cannot be blank";
+            await JSRuntime.InvokeAsync<object>("Alert", errorMessage);
+            return;
+        }
+        await httpClient.PostAsync($"{NavigationManager.BaseUri}posttochannel?message={Message}&userName={Name}&groupName={GroupName}", null);
+    }
+}
