@@ -23,25 +23,27 @@
 
 
     <div class="row">
-        <h3 class="text-success">Messages load here</h3>
-        @foreach (var item in Notifications)
-        {
-            <div class="card">
-                <div class="card-header">
-                    <span style="color: dodgerblue">@item.Key: </span><span>@item.Value</span>
+        <div class="col-4">
+            <h3 class="text-success">Messages load here</h3>
+            @foreach (var item in Notifications)
+            {
+                <div class="card">
+                    <div class="card-header">
+                        <span style="color: dodgerblue">@item.Key: </span><span>@item.Value</span>
+                    </div>
                 </div>
+            }
+            <div>
+                <label>
+                    Name:
+                    <input placeholder="Write your name" @bind="Name" />
+                </label>
+                <label>
+                    Message:
+                    <input placeholder="Write your message" @bind="Message" />
+                </label>
+                <button style="color: white; background-color: cadetblue" @onclick="async () => await Send()">Send</button>
             </div>
-        }
-        <div>
-            <label>
-                Name:
-                <input placeholder="Write your name" @bind="Name" />
-            </label>
-            <label>
-                Message:
-                <input placeholder="Write your message" @bind="Message" />
-            </label>
-            <button style="color: white; background-color: cadetblue" @onclick="async () => await Send()">Send</button>
         </div>
     </div>
 </div>
@@ -99,6 +101,11 @@
 
     private async Task Send()
     {
+        if (!Connected)
+        {
+            await JSRuntime.InvokeAsync<object>("Alert", "You need to connect first!");
+            return;
+        }
         if (string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(Message))
         {
             string errorMessage = "Name and Message textboxes cannot be blank";

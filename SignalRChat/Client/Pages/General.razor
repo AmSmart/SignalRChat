@@ -46,6 +46,11 @@
 
     private async Task Send()
     {
+        if (!isConnected)
+        {
+            await JSRuntime.InvokeAsync<object>("Alert", "You need to connect first!");
+            return;
+        }
         if (string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(Message))
         {
             string errorMessage = "Name and Message textboxes cannot be blank";
