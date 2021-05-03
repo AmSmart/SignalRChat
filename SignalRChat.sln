@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRChat.Server", "TempWebApp\Server\SignalRChat.Server.csproj", "{E7815776-955E-4D4B-ABB9-DC50DD88AA41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRChat.Server", "SignalRChat\Server\SignalRChat.Server.csproj", "{E7815776-955E-4D4B-ABB9-DC50DD88AA41}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRChat.Client", "TempWebApp\Client\SignalRChat.Client.csproj", "{AEE68E1A-ED09-4F4A-BA99-F15440D18EC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRChat.Client", "SignalRChat\Client\SignalRChat.Client.csproj", "{AEE68E1A-ED09-4F4A-BA99-F15440D18EC5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRChat.Shared", "TempWebApp\Shared\SignalRChat.Shared.csproj", "{100942F8-BD13-470A-8A87-170B8075E794}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRChat.Shared", "SignalRChat\Shared\SignalRChat.Shared.csproj", "{100942F8-BD13-470A-8A87-170B8075E794}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
